@@ -7,6 +7,9 @@
     font-family: 'Scheherazade New', serif;
     */
 }
+h3, p {
+    margin:0
+}
 
 /*NAV STYLE*/
 nav{
@@ -141,7 +144,7 @@ nav ul li{
 .section{
     transition: all 0.5s;
     color: #1B1F41;
-    padding:  1rem 3rem;
+    padding:  4rem 3rem;
 }
 
 .section svg{
@@ -149,36 +152,69 @@ nav ul li{
     width:5rem;
     fill:#1B1F41;
 }
+.text-card-container-parent{
+    width:fit-content;
+    margin:auto;
+    width:100%;
+}
 
 .text-card-container {
     width:100%;
     display:flex;
     justify-content:left;
     flex-wrap: wrap;
-    padding:2rem 0;
-    border-radius: 20px;
-    
+    align-items: center;
+    margin:0;
 }
 
 .text-card{
     margin:0.5rem;
-    width: 5rem;
-    height: 5rem;
+    min-width: 5rem;
+    max-width:13rem;
+    min-height: 3rem;
     padding:1rem;
     backdrop-filter: blur(20px);
     border-radius: 20px;
-    transition: all 0.5s ease;
+    transition: all 0.1s ease;
     background: linear-gradient(20deg, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.3) 100%);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.programming-card{
+    background: rgb(226,68,68);
+}
+
+.webb-card{
+    background: rgb(27,31,65);
+}
+
+.education-card{
+    background: rgb(0,101,39);
+}
+.skill-card{
+    background: purple;
+}
+
+.text-card:hover{
+    margin:0.3rem;
+    padding:1.2rem;
 }
 
 .text-card h3, .text-card p{
+    color:white;
     margin:0;
     padding: 0 0 0 0;
 }
+.text-card h3{
+    font-size:1rem;
+}
+.text-card p{
+    font-size:1rem;
+}
 
 .section-3 .text{
-    width:60%;
-    min-width: 500px;
+    width:100%;
+    min-width: 400px;
 }
 
 .flex {
@@ -187,6 +223,41 @@ nav ul li{
     justify-content: space-between;
 }
 
+/*BANNERS*/
+.banner-cards-container{
+    margin:4rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.banner-card{
+    transition: all 0.1s ease-in-out;
+    margin:0.5rem;
+    background:black;
+    border-radius: 20px;
+    width:20%;
+    padding-top: 20rem;
+    background-size: contain;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.banner-card:hover{
+    margin:0;
+    padding:20.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.banner-card .text{
+    margin: 0.5rem;
+    padding:1rem;
+    color: white;
+    backdrop-filter: blur(20px);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+}
 
 @media (max-width: 1000px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
