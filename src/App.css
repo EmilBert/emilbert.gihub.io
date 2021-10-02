@@ -1,38 +1,235 @@
-.App {
-  text-align: center;
+.App{
+    width: 100%;
+    background: #DADADA;
+    /*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Scheherazade New', serif;
+    */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*NAV STYLE*/
+nav{
+    top:0;
+    width:100%;
+    
+}
+nav ul{
+    margin:0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding:0;
+}
+nav ul li{
+    font-size: 1.2rem;
+    padding: 2vh 3vw;
+    color:#1B1F41;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.wrapper{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    
+}
+
+@keyframes transitionAppear {
+    0% {
+      transform: translateY(200%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.section-1 .text h1 span{
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  animation-delay: 1.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: 2;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+.section-1 {
+    background: rgb(27,31,65);
+    background: linear-gradient(58deg, rgba(27,31,65,1) 45%, rgba(12,78,93,1) 100%);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height:35rem;
+
+    overflow: hidden;
+    -moz-box-shadow:    inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow:         inset 0 0 20px #000000;   
+}
+
+.section-1 .content{
+    width:100%;
+    max-width: 1920px;
+    margin:auto;
+    display: table;
+}
+
+#me{
+    max-height: 600px;
+    height: 100%;
+    width:auto;
+    display: flex;
+}
+
+#small-me{
+    max-height: 200px;
+    height: fit-content;
+    border-radius: 30px;
+    display:none;
+    padding:1rem;
+    box-shadow: black;
+}
+
+.section-1 .text{
+    width: 70%;
+    min-width: 200px;
+    color: #F5F5F5;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0 5rem;
+
+    
+}
+
+.section-1 .text div{
+    display:table;
+    justify-content: space-around;
+}
+
+.section-1 .text h1{
+    width:100%;
+    font-size: 4rem;
+    animation: 1s ease-out 0s 1 transitionAppear;
+    padding: 0 0 2rem 0;
+    vertical-align: middle;
+        display:table-cell;
+}
+.section-1 .text p{
+    width:100%;
+    animation: 1s ease-out 0s 1 transitionAppear;
+    padding: 0 0 2rem 0;
+    font-size: 1.3rem;
+}
+
+.section{
+    padding:2rem;
+    overflow: hidden;
+}
+
+.section{
+    transition: all 0.5s;
+    color: #1B1F41;
+    padding:  1rem 3rem;
+}
+
+.section svg{
+    padding:2rem;
+    width:5rem;
+    fill:#1B1F41;
+}
+
+.text-card-container {
+    width:100%;
+    display:flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    border-radius: 20px;
+    
+}
+
+.text-card{
+    margin:0.5rem;
+    width: 5rem;
+    height: 5rem;
+    padding:1rem;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    background: linear-gradient(20deg, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.text-card h3, .text-card p{
+    margin:0;
+    padding: 0 0 0 0;
+}
+
+.section-3 .text{
+    width:60%;
+    min-width: 500px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 1000px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    .section-1 .text h1{
+        padding:0;
+        font-size: 7vw;
+        
+    }
+
+    .section-1{
+        min-height:30rem;
+    }
+    .section-1 .text p{
+        font-size: 1rem;
+        padding:0;
+    }
+
+    #me{
+        display:none;
+    }
+    #small-me{
+        display:flex;
+    }
+    .section-1 .text{
+        width:100%;
+        padding: 0 3rem;
+    }
+
+    .text-card-container {
+        width:100%;
+    }
+
+    .section-3 .text{
+        width:100%;
+        min-width:0;
+    }
+}
+@media (max-width: 600px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+    
+    #small-me{
+        max-height: 100px;
+        display:flex;
+    }
+    
 }
