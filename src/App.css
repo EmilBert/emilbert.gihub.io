@@ -225,39 +225,81 @@ nav ul li{
 
 /*BANNERS*/
 .banner-cards-container{
+    max-height:400px;
     margin:4rem 0;
     display: flex;
     justify-content: center;
     width: 100%;
-    
+    transition: display 5s ease-in-out;
+    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
 }
 
+.banner-card-outer{
+    position: relative;
+    height:22rem;
+    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
+    margin:0.5rem;
+    border-radius: 20px;
+    width:20%;
+}
+
+
 .banner-card{
-    transition: all 0.1s ease-in-out;
+    
+    position: relative;
+    height:22rem;
+    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
     margin:0.5rem;
     background:black;
     border-radius: 20px;
-    width:20%;
-    padding-top: 20rem;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
     background-size: contain;
     background-size: cover;
     background-position: center center;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .banner-card:hover{
     margin:0;
-    padding:20.5rem 0.5rem 0.5rem 0.5rem;
+    padding:0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
-.banner-card .text{
-    margin: 0.5rem;
+.banner-card-hidden{
+    width:0;
+}
+.banner-card-hidden div{
+    display:none;
+}
+
+.container-none{
+    display:none;
+    width:0;
+}
+
+.chosen-banner-card{
+    display:flex;
+    width:100%;
+    background: none;
+}
+
+.chosen-banner-card img{
+    max-height:400px;
+}
+
+.banner-card-outer .text{
     padding:1rem;
     color: white;
     backdrop-filter: blur(20px);
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
+    text-align: left;
+    margin:0.5rem;
 }
+.banner-card .text h3, .banner-card .text p{
+    padding-left:1rem; 
+}
+
 
 @media (max-width: 1000px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */

@@ -5,6 +5,7 @@ import cloth from './images/cloth.png';
 import dunwell from './images/dunwell.png';
 import scroll from './images/scroll.png';
 import bt from './images/bt.png';
+import Section from './Section';
 import * as React from "react";
 
 function App() {
@@ -68,19 +69,7 @@ function App() {
             
           </div>
         </div>
-        <div className="section section-4">
-            <h2>Projekt</h2>
-            <p>Projekt jag gjort eller deltagit i skapandet av!</p>
-
-            <div className="banner-cards-container">
-            <div className="banner-card"  style={{backgroundImage: `url(${scroll})`}}> <div className="text"><h3>Scroll</h3><p>Projekt gjort i React</p></div></div>
-            <div className="banner-card"  style={{backgroundImage: `url(${dunwell})`}}><div className="text"><h3>Dunwell</h3><p>Spelprojekt i c++</p></div></div>
-            <div className="banner-card"  style={{backgroundImage: `url(${cloth})`}}>  <div className="text"><h3>Cloth simulation</h3><p>OpenGL simulering</p></div></div>
-            <div className="banner-card"  style={{backgroundImage: `url(${cc})`}}>     <div className="text"><h3>Projekt</h3><p>description</p></div></div>
-            <div className="banner-card"  style={{backgroundImage: `url(${bt})`}}>     <div className="text"><h3>Projekt</h3><p>description</p></div></div>
-              
-            </div>
-        </div>
+        <Section />
       </div>
     </div>
   );
