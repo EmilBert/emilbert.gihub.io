@@ -6,13 +6,14 @@ function Item(props) {
   const [emoji, setEmoji]         = useState(props.emoji); 
   const [title, setTitle]         = useState(props.title);
   const [subTitle, setSubTitle]   = useState(props.subTitle);
-  const [year, setYear]           = useState(props.year);
-  
+  const [year, setYear]           = useState(props.year.split("-"));
+
+  const [selected, setSelected]           = useState(props.selected);
   return (
     <tr className="exp-list-item">
         <td className="item-icon">{emoji}</td>
-        <td><h3>{title}</h3><p>{subTitle} - {year}</p></td>
-        <td className="last-cell"><p>{year}</p></td>
+        <td><h3>{title} </h3><p>{subTitle} </p><p>{year[0]} ━ {year[1]}</p></td>
+        <td className="last-cell">v</td>
     </tr>
   );
 }
@@ -20,19 +21,20 @@ function Item(props) {
 function List(props) {
   
   const listContent = 
-    [
-        {"emoji":"📚","title":"Civilingenjör inom medieteknik", "subTitle":"Linköpings Universitet","year":"2018-2023" },
-        {"emoji":"💻","title":"Programmeringsmentor", "subTitle":"LiTHehack - Linköpings Universitet","year":"2021-2022" },
-        {"emoji":"👨‍🏫","title":"Styrelsemedlem & Coach", "subTitle":"CoderDojo Norrköping","year":"2018-2023" },
-        {"emoji":"📚","title":"Teknik-Informations- & medieteknik", "subTitle":"Berzeliusksolan Linköping","year":"2015-2018" }
-    ];
-    
+  [
+    {"emoji":"📚","title":"Civilingenjör inom medieteknik", "subTitle":"Linköpings Universitet","year":"2018-2023" },
+    {"emoji":"💻","title":"Programmeringsmentor", "subTitle":"LiTHehack - Linköpings Universitet","year":"2021-2022" },
+    {"emoji":"👨‍🏫","title":"Styrelsemedlem & Coach", "subTitle":"CoderDojo Norrköping","year":"2018-2023" },
+    {"emoji":"📚","title":"Teknik-Informations- & medieteknik", "subTitle":"Berzeliusksolan Linköping","year":"2015-2018" }
+  ];
+  
+  const [selected, setSelected] = useState(0);
 
   return (
     <div className="exp-list-container">
       <table className="exp-list">
         {listContent.map((exp) => (
-          <Item emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year}/>
+          <Item emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year} onClick/>
         ))}
       </table>
     </div>
