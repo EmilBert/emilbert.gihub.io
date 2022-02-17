@@ -10,8 +10,6 @@ function Section() {
   // Declare a new state variable, which we'll call "count"
   const [selected, setSelected] = useState(0);
 
-  
-
   return (
     <div className="section section-4">
       <h2 onClick={() => setSelected(0)}>Projekt {selected}</h2>

@@ -11,23 +11,67 @@ h3, p {
     margin:0
 }
 
-/*NAV STYLE*/
-nav{
-    top:0;
-    width:100%;
-    
+/* EXP LIST */
+.exp-list-container{
+    overflow-x:auto;
 }
-nav ul{
-    margin:0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding:0;
+
+.exp-list{
+    border-spacing:0;
+    overflow-x:auto;
+    width: 100%;
+    min-width: 600px;
+    margin: 2rem 0;
+    background:#DADADA;
+    border-radius: 1.2rem;
+    overflow: hidden;
 }
-nav ul li{
+
+.exp-list tr{
+    transition: all 0.4s ease;
+    border-bottom: 2px solid #1B1F41;
+}
+.exp-list td {
+    padding:20px;
+}
+.exp-list td button{
+    border:0;
+    padding:10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.exp-list tr button{
+    display:none;
+}
+
+
+.exp-list tr:hover{
+    color:#DADADA;
+    background-color: #1B1F41;
+}
+
+.exp-list tr:hover h3{
+    text-decoration: underline;
+}
+
+.exp-list .last-cell{
+    text-align: end;
+}
+
+.exp-list .last-cell p{
     font-size: 1.2rem;
-    padding: 2vh 3vw;
-    color:#1B1F41;
+}
+
+.exp-list-item .item-icon{
+    width:2rem;
+    font-size: 2rem;
+    border-right: 2px solid #1B1F41;
+}
+
+hr{
+    border:1px #1B1F41 solid;
+    margin:0;
 }
 
 .wrapper{
@@ -48,7 +92,7 @@ nav ul li{
     }
   }
 
-  @keyframes wave-animation {
+@keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
    20% { transform: rotate(-8.0deg) }
@@ -112,8 +156,6 @@ nav ul li{
     vertical-align: middle;
     display: table-cell;
     padding: 0 5rem;
-
-    
 }
 
 .section-1 .text div{
