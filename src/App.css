@@ -11,6 +11,76 @@
 h3, p {
     margin:0
 }
+
+.projects-bg{
+    background: rgb(27,31,65);
+    background: 
+    linear-gradient(58deg, rgba(27,31,65,1) 45%, rgba(12,78,93,1) 100%);
+    
+    width: 100%;
+    -moz-box-shadow:    inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow:         inset 0 0 20px #000000;   
+    left:0;
+    position: absolute;
+    margin-top:2rem;
+}
+
+.projects{
+    padding: 2rem 0;
+    max-width: 1200px;
+    display:flex;
+    flex-wrap: wrap;
+    margin:1rem 0;
+    width: 100%;
+    justify-content: center;
+    margin:auto;
+    /* left:0;
+    position: absolute;
+    z-index: 1;
+    */
+}
+.project{
+    border-radius: 1rem;
+    width: 31%;
+    display:block;
+    color:#1B1F41;
+    margin: 0 1rem 1rem 0;
+    transition: all .2s ease-in-out; 
+    background: #DADADA;
+}
+
+
+
+.project-section p{
+    padding-bottom:2rem;
+}
+
+.project:hover{
+    transform:scale(1.05);
+    -webkit-box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.23); 
+    box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.23);
+}
+.project img{
+    border-radius: 1rem 1rem 0 0;
+    width:100%;
+    transition: all .2s ease-in-out; 
+    -moz-box-shadow:    inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow:         inset 0 0 20px #000000;   
+    height:12rem;
+    object-fit: cover;
+    object-position: 0 30%;
+}
+
+.project:hover img{
+    transform:scale(1.05);
+    border-radius: 1rem;
+}
+
+.project-text{
+    padding: 1rem 2rem 2rem 2rem;
+}
 /* EXP LIST */
 .exp-list-container{
     overflow-x:auto;
@@ -23,11 +93,9 @@ h3, p {
     min-width: 600px;
     margin: 2rem 0;
     background:#DADADA;
-    /*border-radius: 1.2rem;
-    overflow: hidden;*/
+    overflow: hidden;
     transition: all 0.1s ease;
 }
-
 .exp-list tr{
     transition: all 0.4s ease;
     border-bottom: 2px solid #1B1F41;
@@ -105,8 +173,6 @@ nav .wrapper{
     transition: all 0.5s ease-in-out;
     background-color: rgb(27, 31, 65, 0);
 }
-
-
 nav a{
     padding:1rem;
     transition: all 0.3s ease-in-out;
@@ -159,6 +225,7 @@ nav a:hover{
   100% { transform: rotate( 0.0deg) }
   }
 
+
 .section-1 .text h1 span{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s;
@@ -171,22 +238,21 @@ nav a:hover{
 .section-1 {
     background: rgb(27,31,65);
     background: linear-gradient(58deg, rgba(27,31,65,1) 45%, rgba(12,78,93,1) 100%);
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     min-height:35rem;
-
     padding-top:6rem;
-    
     overflow: hidden;
+
     -moz-box-shadow:    inset 0 0 20px #000000;
     -webkit-box-shadow: inset 0 0 20px #000000;
     box-shadow:         inset 0 0 20px #000000;   
 }
-
 .section-1 .content{
     width:100%;
-    max-width: 1920px;
+    max-width: 1200px;
     margin:auto;
     display: table;
 }
@@ -237,12 +303,10 @@ nav a:hover{
 }
 
 .section{
-    overflow: hidden;
     transition: all 0.5s;
     color: #1B1F41;
-    padding:  4rem 3rem 1rem;
+    padding:  2rem 3rem 2rem;
 }
-
 
 .text-card-container-parent{
     width:fit-content;
@@ -316,7 +380,7 @@ nav a:hover{
 }
 
 /*BANNERS*/
-.banner-cards-container{
+/* .banner-cards-container{
     max-height:400px;
     margin:4rem 0;
     display: flex;
@@ -390,7 +454,7 @@ nav a:hover{
 }
 .banner-card .text h3, .banner-card .text p{
     padding-left:1rem; 
-}
+} */
 
 
 @media (max-width: 1000px) {

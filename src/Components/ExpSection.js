@@ -20,11 +20,7 @@ function Item(props) {
           <p>{subTitle} </p> 
           <p>{year[0]} ━ {year[1]}</p>
           <span><p className="content">{content}</p></span>
-          
-          
-          
         </td>
-        
     </tr>
   );
 }
@@ -46,7 +42,7 @@ function List(props) {
       <table className="exp-list">
         <tbody>
         {listContent.map((exp) => (
-          <Item selected = {true} emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year} content={exp.content} onClick/>
+          <Item selected = {true} emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year} content={exp.content}/>
         ))}
         </tbody>
       </table>
