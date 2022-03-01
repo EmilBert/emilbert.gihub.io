@@ -4,6 +4,7 @@ import cloth from './../images/cloth.png';
 import dunwell from './../images/dunwell.png';
 import scroll from './../images/scroll.png';
 import bt from './../images/bt.png';
+import bc from './../images/bc.png';
 
 function Project(props){
   const [image, setImage]  = useState(props.image); 
@@ -11,13 +12,18 @@ function Project(props){
 
   return (
         <div className="project">
-          <img class="project-img" alt="me" src={props.image}></img>
           <div className="project-text">
-            <div className="badges"><span>{props.tags}</span></div>
-            <h3>{props.title}</h3>
-            <p>{props.desc}</p>
-            <a>{props.link}</a>
+            
+            <div>
+              <div className="badges"><span>{props.tags}</span></div>
+              <h3>{props.title}</h3>
+            </div>
+            <div>
+              <p>{props.desc}</p>
+              <a href={props.link}>View on Github</a>
+            </div>
           </div>
+          <img class="project-img" alt="me" src={props.image}/>
         </div>
   );
 }
@@ -29,12 +35,12 @@ function ProjectSection(props) {
   
   const listContent = 
   [
-    {"image":bt,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"},
-    {"image":cc,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"},
-    {"image":scroll,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"},
-    {"image":cloth,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"},
-    {"image":dunwell,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"},
-    {"image":"2","title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++,OpenGL", "link":"www.youtube.com"} 
+    {"image":bc,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++, OpenGL", "link":"www.youtube.com"},
+    {"image":cc,"title":"Corporate Combat","desc":"Online AR phone game", "tags":"Unity, Photon", "link":"www.youtube.com"},
+    {"image":scroll,"title":"Scroll","desc":"React DnD Companion App", "tags":"UX, React", "link":"www.youtube.com"},
+    {"image":cloth,"title":"Cloth Simulation","desc":"Spring-damper model simulation", "tags":"C++, OpenGL, Matlab", "link":"www.youtube.com"},
+    {"image":dunwell,"title":"Dunwell","desc":"C++ Game", "tags":"C++, Pixelart", "link":"www.youtube.com"},
+    {"image":bt,"title":"BrickTracker","desc":"Website", "tags":"HTML,CSS,SQL", "link":"www.youtube.com"} 
   ];
   
   return (
