@@ -12,6 +12,7 @@ function Project(props){
 
   return (
         <div className="project">
+          <img class="project-img" alt="me" src={props.image}/>
           <div className="project-text">
             
             <div>
@@ -23,7 +24,6 @@ function Project(props){
               <a href={props.link}>View on Github</a>
             </div>
           </div>
-          <img class="project-img" alt="me" src={props.image}/>
         </div>
   );
 }
@@ -37,8 +37,8 @@ function ProjectSection(props) {
   [
     {"image":bc,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++, OpenGL", "link":"www.youtube.com"},
     {"image":cc,"title":"Corporate Combat","desc":"Online AR phone game", "tags":"Unity, Photon", "link":"www.youtube.com"},
-    {"image":scroll,"title":"Scroll","desc":"React DnD Companion App", "tags":"UX, React", "link":"www.youtube.com"},
     {"image":cloth,"title":"Cloth Simulation","desc":"Spring-damper model simulation", "tags":"C++, OpenGL, Matlab", "link":"www.youtube.com"},
+    {"image":scroll,"title":"Scroll","desc":"React DnD Companion App", "tags":"UX, React", "link":"www.youtube.com"},
     {"image":dunwell,"title":"Dunwell","desc":"C++ Game", "tags":"C++, Pixelart", "link":"www.youtube.com"},
     {"image":bt,"title":"BrickTracker","desc":"Website", "tags":"HTML,CSS,SQL", "link":"www.youtube.com"} 
   ];
@@ -48,14 +48,20 @@ function ProjectSection(props) {
       <h1>{title}</h1>
       <p>{content}<br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p>
 
-      <div className="projects-bg">
         <div className="projects">
-          {listContent.map((proj) => (
-            <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/>
+          <div className="projects-column">
+          {listContent.map((proj, index) => (
+            index % 2 == 0 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
           ))}
+          </div>
+
+          <div className="projects-column">
+          {listContent.map((proj, index) => (
+            index % 2 == 1 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
+          ))}
+          </div>
         </div>
       </div> 
-    </div>  
   );
 }
 export default ProjectSection;
