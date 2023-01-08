@@ -7,8 +7,8 @@ import bt from './../images/bt.png';
 import bc from './../images/bc.png';
 
 function Project(props){
-  const [image, setImage]  = useState(props.image); 
-  
+
+
 
   return (
         <div className="project">
@@ -35,7 +35,7 @@ function ProjectSection(props) {
   
   const listContent = 
   [
-    {"image":bc,"title":"Bertcraft","desc":"Voxel terrain generation", "tags":"C++, OpenGL", "link":"www.youtube.com"},
+    {"image":bc,"title":"BERTCRAFT","desc":"Voxel terrain generation", "tags":"C++, OpenGL", "link":"www.youtube.com"},
     {"image":cc,"title":"Corporate Combat","desc":"Online AR phone game", "tags":"Unity, Photon", "link":"www.youtube.com"},
     {"image":cloth,"title":"Cloth Simulation","desc":"Spring-damper model simulation", "tags":"C++, OpenGL, Matlab", "link":"www.youtube.com"},
     {"image":scroll,"title":"Scroll","desc":"React DnD Companion App", "tags":"UX, React", "link":"www.youtube.com"},
