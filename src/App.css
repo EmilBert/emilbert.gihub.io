@@ -25,7 +25,7 @@ h1,h2,h3,h4,h5{
 }
 
 .downloads{
-    padding: 0 3rem;
+    padding: 1rem 3rem 0;
     display: flex;
     flex-wrap: wrap;
     min-width: 300px;
@@ -51,12 +51,11 @@ h1,h2,h3,h4,h5{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .projects-column{
-    padding:1rem;
-    width:45%;
+    flex:20;
     min-width: 400px;
 }
 
@@ -274,7 +273,7 @@ nav a:hover{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    min-height:35rem;
+    min-height:30rem;
     padding-top:6rem;
     overflow: hidden;
 
@@ -289,11 +288,16 @@ nav a:hover{
     display: table;
 }
 
-#footer-section{
+#footer{
     background-color: #1B1F41;
     color: #808cfc;
 }
 
+#footer-section{
+    color: #808cfc;
+    padding-top: rem;
+    padding-bottom: 5rem;
+}
 
 #me{
     max-height: 600px;
@@ -343,7 +347,7 @@ nav a:hover{
 .section{
     transition: all 0.5s;
     color: #1B1F41;
-    padding:  2rem 3rem 2rem;
+    padding:  4rem 3rem 0rem;
 }
 
 .text-card-container-parent{
@@ -509,15 +513,13 @@ nav a:hover{
         width:90%;
     }
     nav .wrapper{
+        width: 100%;
         padding:1rem;
-        width:100%;
-    }
-
-
-    nav .wrapper{
         display: block;
         border-radius: 0;
+        margin:0;
     }
+    
     nav .nav-button{
         display:none;
     }
@@ -575,6 +577,7 @@ nav a:hover{
 
     .projects-column{
         width: 100%;
+        min-width: 100%;
         padding:0rem 0;
     }
 

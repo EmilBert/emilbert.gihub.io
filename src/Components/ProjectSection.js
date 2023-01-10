@@ -54,7 +54,7 @@ function ProjectSection(props) {
             index % 2 == 0 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
           ))}
           </div>
-
+          <div style={{flex:1}}></div>
           <div className="projects-column">
           {listContent.map((proj, index) => (
             index % 2 == 1 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
