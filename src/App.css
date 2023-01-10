@@ -1,3 +1,8 @@
+
+iframe {
+    pointer-events: none;
+}
+
 .App{
     width: 100%;
     background: #DADADA;
@@ -19,6 +24,28 @@ h1,h2,h3,h4,h5{
     font-weight: bold;
 }
 
+.downloads{
+    padding: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.download-link{
+    transition: all 0.3s ease-in-out;
+    padding:1rem;
+    background-color: #cacacf;
+    color:#1B1F41;
+    margin: 0 1rem 1rem 0;
+    border-radius: 2px;
+    border:#1B1F41 1px solid;
+}
+
+.download-link:hover{
+    background-color:#808cfc;
+}
+
+
 .projects{
     width: 100%;
     display: flex;
@@ -28,32 +55,33 @@ h1,h2,h3,h4,h5{
 }
 
 .projects-column{
-    width:520px;
     padding:1rem;
+    width:45%;
+    min-width: 400px;
 }
+
 
 .project{
     width:100%;
     margin: 2rem 0;
     background: "white";
-    animation: transitionAppear 5s ease-in-out;
-}
+    border-radius: 2px;
 
-.projects-column img{
-    transform: scale(0.95);
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    width:100%;
-    margin:0;
-    
+    border: #1B1F41 1px solid;
     box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
     -webkit-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
     -moz-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
-    
+    transition: all 0.3s ease-in-out;
 }
 
-.project img:hover {
-    transform: scale(1);
+.projects-column img{
+    width:100%;
+    margin:0;
+    border-bottom: #1B1F41 1px solid;
+}
+
+.project:hover {
+    transform: scale(1.01);
 }
 
 .project h3{
@@ -61,7 +89,6 @@ h1,h2,h3,h4,h5{
 }
 
 .project-text{
-    width:500px;
     padding:1rem;
 }
 
@@ -74,7 +101,7 @@ h1,h2,h3,h4,h5{
     overflow-x:auto;
     width: 100%;
     min-width: 600px;
-    margin: 2rem 0;
+    margin-top: 2rem;
     background:#DADADA;
     overflow: hidden;
     transition: all 0.1s ease;
@@ -88,6 +115,7 @@ h1,h2,h3,h4,h5{
 .exp-list td {
     padding: 0.5rem 1.5rem;
     vertical-align: top;
+    overflow: hidden;
 }
 .exp-list-item h3{
     font-size: 1.2rem;
@@ -121,13 +149,13 @@ h1,h2,h3,h4,h5{
     max-height:0;
     transition: all 0.2s ease-in-out;
     opacity: 0;
-    overflow: hidden;
+    
 }
 
 .exp-list-item .show .content{
     opacity: 1;
     transition: all 0.3s ease-in-out;
-    max-height:10rem;
+    max-height:20rem;
     height:auto;
     padding-bottom:1rem;
 }
@@ -152,7 +180,7 @@ nav{
 nav .wrapper{
     display: flex;
     justify-content: space-around;
-    border-radius: 1rem;
+    border-radius: 2px;
     transition: all 0.5s ease-in-out;
     background-color: rgb(27, 31, 65, 0);
 }
@@ -184,7 +212,28 @@ nav a:hover{
     color:#DADADA;
 }
 
+.cursor{
+    font-weight: 100;
+}
 
+.blink{
+    animation: blinkAnim 2s ease-in-out infinite;
+}
+
+@keyframes blinkAnim {
+    0% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 @keyframes transitionAppear {
     0% {
@@ -209,10 +258,10 @@ nav a:hover{
   }
 
 
-.section-1 .text h1 span{
+.wave{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s;
-  animation-delay: 1.5s;        /* Change to speed up or slow down */
+  animation-delay: 2s;        /* Change to speed up or slow down */
   animation-iteration-count: 2;  /* Never stop waving :) */
   transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
   display: inline-block;
@@ -239,6 +288,12 @@ nav a:hover{
     margin:auto;
     display: table;
 }
+
+#footer-section{
+    background-color: #1B1F41;
+    color: #808cfc;
+}
+
 
 #me{
     max-height: 600px;
@@ -449,8 +504,13 @@ nav a:hover{
     nav{
         padding-top: 0;
     }
+    
+    .wrapper{
+        width:90%;
+    }
     nav .wrapper{
         padding:1rem;
+        width:100%;
     }
 
 
@@ -461,7 +521,7 @@ nav a:hover{
     nav .nav-button{
         display:none;
     }
-    .section{
+    .section, .downloads{
         padding-left:0.5rem;
         padding-right:0.5rem;
     }
@@ -511,6 +571,15 @@ nav a:hover{
     .section-3 .text{
         width:100%;
         min-width:0;
+    }
+
+    .projects-column{
+        width: 100%;
+        padding:0rem 0;
+    }
+
+    .project{
+        margin: 1rem 0;
     }
 }
 @media (max-width: 600px) {

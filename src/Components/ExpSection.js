@@ -2,24 +2,21 @@ import React, { useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md';
 import { MdArrowDropUp } from 'react-icons/md';
 
-function Item(props) {
-  const [emoji, setEmoji]         = useState(props.emoji); 
-  const [title, setTitle]         = useState(props.title);
-  const [subTitle, setSubTitle]   = useState(props.subTitle);
-  const [year, setYear]           = useState(props.year.split("-"));
-  const [content, setContent]     = useState(props.content);
+function Item({emoji, title, subTitle, year, content}) {
+  
+  let yearFormat = year.split("-")
+
+  
   const [selected, setSelected]   = useState(1);
   
   return (
     <tr className="exp-list-item "  onClick={selected == 1 ? () => setSelected(0) : () => setSelected(1)}>
         <td className="item-icon">{emoji}</td>
         <td className={selected ? "content-td hide" : "content-td show"}>
-          
           <div className="split"><h3>{title} </h3><span className="drop"> {selected ? <MdArrowDropDown size={30} />: <MdArrowDropUp size={30}/>} </span></div>
-          
           <p>{subTitle} </p> 
-          <p>{year[0]} ━ {year[1]}</p>
-          <span><p className="content">{content}</p></span>
+          <p>{yearFormat[0]} ━ {yearFormat[1]}</p>
+          <p className="content">{content}</p>
         </td>
     </tr>
   );
