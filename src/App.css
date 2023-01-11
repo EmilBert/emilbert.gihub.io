@@ -1,6 +1,15 @@
+
+iframe {
+    pointer-events: none;
+}
+
 .App{
     width: 100%;
     background: #DADADA;
+    scroll-behavior: smooth;
+    font-family: 'Space Grotesk', sans-serif;
+    
+
     /*
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Mono', monospace;
@@ -11,31 +20,219 @@ h3, p {
     margin:0
 }
 
-/*NAV STYLE*/
-nav{
-    top:0;
-    width:100%;
-    
-}
-nav ul{
-    margin:0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding:0;
-}
-nav ul li{
-    font-size: 1.2rem;
-    padding: 2vh 3vw;
-    color:#1B1F41;
+h1,h2,h3,h4,h5{
+    font-weight: bold;
 }
 
+.downloads{
+    padding: 1rem 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+}
+
+.download-link{
+    transition: all 0.3s ease-in-out;
+    padding:1rem;
+    background-color: #cacacf;
+    color:#1B1F41;
+    margin: 0 1rem 1rem 0;
+    border-radius: 2px;
+    border:#1B1F41 1px solid;
+}
+
+.download-link:hover{
+    background-color:#808cfc;
+}
+
+
+.projects{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projects-column{
+    flex:20;
+    min-width: 400px;
+}
+
+
+.project{
+    width:100%;
+    margin: 2rem 0;
+    background: "white";
+    border-radius: 2px;
+
+    border: #1B1F41 1px solid;
+    box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
+    -moz-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
+    transition: all 0.3s ease-in-out;
+}
+
+.projects-column img{
+    width:100%;
+    margin:0;
+    border-bottom: #1B1F41 1px solid;
+}
+
+.project:hover {
+    transform: scale(1.01);
+}
+
+.project h3{
+    font-size: 2rem;
+}
+
+.project-text{
+    padding:1rem;
+}
+
+/* EXP LIST */
+.exp-list-container{
+    overflow-x:auto;
+}
+.exp-list{
+    border-spacing:0;
+    overflow-x:auto;
+    width: 100%;
+    min-width: 600px;
+    margin-top: 2rem;
+    background:#DADADA;
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+.exp-list tr{
+    transition: all 0.4s ease;
+    border-bottom: 2px solid #1B1F41;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+.exp-list td {
+    padding: 0.5rem 1.5rem;
+    vertical-align: top;
+    overflow: hidden;
+}
+.exp-list-item h3{
+    font-size: 1.2rem;
+}
+.exp-list-item .year .first-year{
+    margin-bottom:0.5rem;
+}
+.exp-list tr:hover .content-td, .exp-list tr:hover .last-cell{
+    background-color: #cacacf;
+}
+.exp-list tr:hover h3{
+    text-decoration: underline;
+}
+
+.exp-list-item .split{
+    display:flex;
+    justify-content: space-between;
+}
+
+.exp-list-item .item-icon{
+    width:2rem;
+    font-size: 3rem;
+    border-right: 2px solid #1B1F41;
+}
+
+.exp-list-item .show{
+    border-bottom: 2px solid #1B1F41;
+}
+
+.exp-list-item .hide .content{
+    max-height:0;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    
+}
+
+.exp-list-item .show .content{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    max-height:20rem;
+    height:auto;
+    padding-bottom:1rem;
+}
+
+hr{
+    border:1px #1B1F41 solid;
+    margin:0;
+}
 .wrapper{
     width:100%;
     max-width:1200px;
     margin:auto;
-    
 }
+
+nav{
+    position:fixed;
+    width: 100%;
+    z-index: 2;
+    padding-top: 1rem;
+    font-size:1.2rem;
+}
+nav .wrapper{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 2px;
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(27, 31, 65, 0);
+}
+nav a{
+    padding:1rem;
+    transition: all 0.3s ease-in-out;
+    width: 15%;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+nav a{
+    color:#808cfc;
+    font-weight: 600;
+}
+
+nav .bg-show{
+    background-color: rgb(27, 31, 65, 1);
+    -webkit-box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.63); 
+    box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.63);
+}
+
+.my-name{
+    color:white;
+}
+
+nav a:hover{
+    color:#DADADA;
+}
+
+.cursor{
+    font-weight: 100;
+}
+
+.blink{
+    animation: blinkAnim 2s ease-in-out infinite;
+}
+
+@keyframes blinkAnim {
+    0% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0;
+    }
+    60% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
 
 @keyframes transitionAppear {
     0% {
@@ -48,7 +245,7 @@ nav ul li{
     }
   }
 
-  @keyframes wave-animation {
+@keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
    20% { transform: rotate(-8.0deg) }
@@ -59,10 +256,11 @@ nav ul li{
   100% { transform: rotate( 0.0deg) }
   }
 
-.section-1 .text h1 span{
+
+.wave{
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
   animation-duration: 2.5s;
-  animation-delay: 1.5s;        /* Change to speed up or slow down */
+  animation-delay: 2s;        /* Change to speed up or slow down */
   animation-iteration-count: 2;  /* Never stop waving :) */
   transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
   display: inline-block;
@@ -71,22 +269,34 @@ nav ul li{
 .section-1 {
     background: rgb(27,31,65);
     background: linear-gradient(58deg, rgba(27,31,65,1) 45%, rgba(12,78,93,1) 100%);
+
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    min-height:35rem;
-
+    min-height:30rem;
+    padding-top:6rem;
     overflow: hidden;
+
     -moz-box-shadow:    inset 0 0 20px #000000;
     -webkit-box-shadow: inset 0 0 20px #000000;
     box-shadow:         inset 0 0 20px #000000;   
 }
-
 .section-1 .content{
     width:100%;
-    max-width: 1920px;
+    max-width: 1200px;
     margin:auto;
     display: table;
+}
+
+#footer{
+    background-color: #1B1F41;
+    color: #808cfc;
+}
+
+#footer-section{
+    color: #808cfc;
+    padding-top: rem;
+    padding-bottom: 5rem;
 }
 
 #me{
@@ -112,8 +322,6 @@ nav ul li{
     vertical-align: middle;
     display: table-cell;
     padding: 0 5rem;
-
-    
 }
 
 .section-1 .text div{
@@ -137,21 +345,11 @@ nav ul li{
 }
 
 .section{
-    padding:2rem;
-    overflow: hidden;
-}
-
-.section{
     transition: all 0.5s;
     color: #1B1F41;
-    padding:  4rem 3rem;
+    padding:  4rem 3rem 0rem;
 }
 
-.section svg{
-    padding:2rem;
-    width:5rem;
-    fill:#1B1F41;
-}
 .text-card-container-parent{
     width:fit-content;
     margin:auto;
@@ -224,7 +422,7 @@ nav ul li{
 }
 
 /*BANNERS*/
-.banner-cards-container{
+/* .banner-cards-container{
     max-height:400px;
     margin:4rem 0;
     display: flex;
@@ -298,7 +496,7 @@ nav ul li{
 }
 .banner-card .text h3, .banner-card .text p{
     padding-left:1rem; 
-}
+} */
 
 
 @media (max-width: 1000px) {
@@ -306,7 +504,47 @@ nav ul li{
     .section-1 .text h1{
         padding:0;
         font-size: 7vw;
-        
+    }
+    nav{
+        padding-top: 0;
+    }
+    
+    .wrapper{
+        width:90%;
+    }
+    nav .wrapper{
+        width: 100%;
+        padding:1rem;
+        display: block;
+        border-radius: 0;
+        margin:0;
+    }
+    
+    nav .nav-button{
+        display:none;
+    }
+    .section, .downloads{
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+    }
+    .exp-list{
+        min-width:100%;
+        width: 100%;
+    }
+
+    .exp-list td {
+        padding: 0.5rem 1rem;
+        vertical-align: top;
+    }
+    .exp-list-item h3{
+        font-size: 1rem;
+    }
+
+    .exp-list-item .item-icon{
+        width:1.2rem;
+        padding:0.5rem;
+        font-size: 1.2rem;
+        border-right: 2px solid #1B1F41;
     }
 
     .section-1{
@@ -335,6 +573,16 @@ nav ul li{
     .section-3 .text{
         width:100%;
         min-width:0;
+    }
+
+    .projects-column{
+        width: 100%;
+        min-width: 100%;
+        padding:0rem 0;
+    }
+
+    .project{
+        margin: 1rem 0;
     }
 }
 @media (max-width: 600px) {
