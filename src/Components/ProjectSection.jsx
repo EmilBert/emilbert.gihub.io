@@ -12,7 +12,7 @@ function Project(props){
 
   return (
         <div className="project">
-          <img class="project-img" alt="me" src={props.image}/>
+          <img className="project-img" alt="me" src={props.image}/>
           <div className="project-text">
             
             <div>
@@ -51,13 +51,13 @@ function ProjectSection(props) {
         <div className="projects">
           <div className="projects-column">
           {listContent.map((proj, index) => (
-            index % 2 == 0 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
+            index % 2 == 0 ? <Project key={index} image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
           ))}
           </div>
           <div style={{flex:1}}></div>
           <div className="projects-column">
           {listContent.map((proj, index) => (
-            index % 2 == 1 ? <Project image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
+            index % 2 == 1 ? <Project key={index} image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
           ))}
           </div>
         </div>

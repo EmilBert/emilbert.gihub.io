@@ -4,10 +4,8 @@ function Navbar() {
     const [navbar, setNavbar] = useState(false);
     
     const changeBackground = () => {
-        console.log(window.scrollY)
         window.scrollY >= 100 ? setNavbar(true) : setNavbar(false);
     }
-
     useEffect(() => {
       changeBackground();
       window.addEventListener("scroll", changeBackground);

@@ -38,8 +38,8 @@ function List(props) {
     <div className="exp-list-container">
       <table className="exp-list">
         <tbody>
-        {listContent.map((exp) => (
-          <Item selected = {true} emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year} content={exp.content}/>
+        {listContent.map((exp, index) => (
+          <Item key={index} selected = {true} emoji={exp.emoji} title={exp.title} subTitle={exp.subTitle} year={exp.year} content={exp.content}/>
         ))}
         </tbody>
       </table>
