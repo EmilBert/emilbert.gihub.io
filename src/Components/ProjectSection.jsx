@@ -35,7 +35,7 @@ function ProjectSection(props) {
   
   const listContent = 
   [
-    {"image":bc,"title":"BERTCRAFT","desc":"Voxel terrain generation", "tags":"C++, OpenGL", "link":"www.youtube.com"},
+    {"image":bc,"title":"BERTCRAFT","desc":"I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.", "tags":"C++, OpenGL", "link":"www.youtube.com"},
     {"image":cc,"title":"Corporate Combat","desc":"Online AR phone game", "tags":"Unity, Photon", "link":"www.youtube.com"},
     {"image":cloth,"title":"Cloth Simulation","desc":"Spring-damper model simulation", "tags":"C++, OpenGL, Matlab", "link":"www.youtube.com"},
     {"image":scroll,"title":"Scroll","desc":"React DnD Companion App", "tags":"UX, React", "link":"www.youtube.com"},

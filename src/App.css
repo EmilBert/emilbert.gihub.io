@@ -91,16 +91,22 @@ h1,h2,h3,h4,h5{
     padding:1rem;
 }
 
+.project-text p{
+    padding-bottom: 1rem;
+}
+
 /* EXP LIST */
+#exp-section .content{
+    width: 100%;
+    display: flex;
+}
+
 .exp-list-container{
     overflow-x:auto;
 }
 .exp-list{
     border-spacing:0;
     overflow-x:auto;
-    width: 100%;
-    min-width: 600px;
-    margin-top: 2rem;
     background:#DADADA;
     overflow: hidden;
     transition: all 0.1s ease;
@@ -274,7 +280,7 @@ nav a:hover{
     display: flex;
     flex-wrap: wrap;
     min-height:30rem;
-    padding-top:6rem;
+    padding-top:2rem;
     overflow: hidden;
 
     -moz-box-shadow:    inset 0 0 20px #000000;
@@ -332,14 +338,14 @@ nav a:hover{
 .section-1 .text h1{
     width:100%;
     font-size: 4rem;
-    animation: 1s ease-out 0s 1 transitionAppear;
+    /* animation: 1s ease-out 0s 1 transitionAppear; */
     padding: 0 0 2rem 0;
     vertical-align: middle;
         display:table-cell;
 }
 .section-1 .text p{
     width:100%;
-    animation: 1s ease-out 0s 1 transitionAppear;
+    /* animation: 1s ease-out 0s 1 transitionAppear; */
     padding: 0 0 2rem 0;
     font-size: 1.3rem;
 }
@@ -527,7 +533,14 @@ nav a:hover{
         padding-left:0.5rem;
         padding-right:0.5rem;
     }
+
+    #exp-section .content{
+        
+        flex-wrap: wrap;
+    }
+
     .exp-list{
+        margin-top:2rem;
         min-width:100%;
         width: 100%;
     }
@@ -548,7 +561,7 @@ nav a:hover{
     }
 
     .section-1{
-        min-height:30rem;
+        min-height:20rem;
     }
     .section-1 .text p{
         font-size: 1rem;
