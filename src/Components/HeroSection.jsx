@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function HeroSection() {
 
-    let titleText = "Hi, my name is Emil!                 Im a 5th year engineering student at LiU.";
+    let titleText = "Hi, my name is Emil!                 Im a 5th year master engineering student at LiU.";
 
     const [title , setTitle] = React.useState("");
 
@@ -12,7 +12,6 @@ export default function HeroSection() {
             setTitle(title + titleText[title.length]);
         }
     }
-
     React.useEffect(() => {    
         //randomize the interval
         if(title.length == ""){
