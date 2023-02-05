@@ -47,16 +47,14 @@ function List(props) {
   );
 }
 
-function ExpSection(props) {
-  // Declare a new state variable, which we'll call "count"
-  const [title, setTitle]       = useState(props.title);
-  const [content, setContent]   = useState(props.content);
+function ExpSection() {
+
   return (
     <div className="section" id="exp-section">
-      <h1>{title}</h1>
+      <h1>Experience</h1>
       <div className="content">
         <div>
-          <p>{content}<br/><br/></p>
+          <p><br/><br/></p>
           
           <h2>Voulenteer Work</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p>

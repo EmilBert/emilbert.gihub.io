@@ -28,11 +28,7 @@ function Project(props){
   );
 }
 
-function ProjectSection(props) {
-  // Declare a new state variable, which we'll call "count"
-  const [title, setTitle]       = useState(props.title);
-  const [content, setContent]   = useState(props.content);
-  
+function ProjectSection() {
   const listContent = 
   [
     {"image":bc,"title":"BERTCRAFT","desc":"I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.", "tags":"C++, OpenGL", "link":"www.youtube.com"},
@@ -45,8 +41,8 @@ function ProjectSection(props) {
   
   return (
     <div className="section" id="project-section">
-      <h1>{title}</h1>
-      <p>{content}<br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p>
+      <h1>Projects</h1>
+      <p><br/><br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p>
 
         <div className="projects">
           <div className="projects-column">

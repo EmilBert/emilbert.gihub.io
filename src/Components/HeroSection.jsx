@@ -22,7 +22,7 @@ export default function HeroSection() {
         }
         const interval = setInterval(() => {
             addLetter();
-        }, 50 + Math.random() * 50 );
+        }, 25 + Math.random() * 70 );
         return () => clearInterval(interval);
     }, [title]);
 
