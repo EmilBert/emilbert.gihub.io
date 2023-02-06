@@ -1,6 +1,6 @@
 import './App.css';
-import me from './images/me.png';
-import bg from './images/bc.png';
+import cv from './images/Emil Bertholdsson - CV.pdf';
+import me from './images/emil2.jpg';
 
 import { IconContext} from 'react-icons';
 import { MdDownload } from 'react-icons/md';
@@ -22,14 +22,12 @@ function App() {
         <HeroSection/>
         <div className="wrapper">
           <div className="section" id="about-section">
-            <h1>About Me</h1>
-            <p>Hi! I love developing fun experiences in both web 
-              and game development. I enjoy solving complex problems with a passion for UI/UX design and 
-              computer graphics. I am currently persuing my Masters in Science and Engineering in Media Technology.</p>
+            <img id="me" alt="me" src={me} />
+            <div>
+              <p> I am an ambitious developer who loves creating experiences, in both games and through web development. I have a passion for computer graphics and UI/UX design. Here you can read more about me and some of my projects!</p>
+              <a className="download-link" href={cv} download>Emil Bertholdsson-CV-eng.pdf <MdDownload/></a>
+              {/* <a className="download-link" href={me} download>Emil Bertholdsson-CV-sv.pdf <MdDownload/></a> */}
             </div>
-          <div className="downloads">
-            <a className="download-link" href={me} download>Emil Bertholdsson-CV-eng.pdf <MdDownload/></a>
-            {/* <a className="download-link" href={me} download>Emil Bertholdsson-CV-sv.pdf <MdDownload/></a> */}
           </div>
           <ExpSection />
           <ProjectSection/>

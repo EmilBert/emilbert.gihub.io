@@ -1,15 +1,29 @@
 import * as React from "react";
+import { MdPhoneEnabled, MdEmail  } from 'react-icons/md';
+import { AiFillLinkedin, AiFillGithub  } from 'react-icons/ai';
 
-export default function Footer() {
 
+        
+export default function Footer(){
     return (
         <div id="footer">
             <div className="wrapper">
                 <div className="section" id="footer-section">
                     <h1>Contacts</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p>
-                </div>
+                    <div className="contacts-link">
+                    <a href="https://www.linkedin.com/in/emil-bertholdsson/"><AiFillLinkedin/> Emil Bertholdsson</a>
+                    </div>
+                    <div className="contacts-link">
+                    <a href="https://github.com/EmilBert"><AiFillGithub/> Github/EmilBert</a>
+                    </div>
+                    <div className="contacts-link">
+                    <a href="mailto:emil.bertholdsson@gmail.com"><MdEmail/> emil.bertholdsson@gmail.com</a>
+                    </div>
+                    <div className="contacts-link">
+                    <a href="tel:+46723161811"><MdPhoneEnabled/> +46723161811</a>
+                    </div>
+                 </div>
             </div>
-          </div>
+        </div>
     );
 }
