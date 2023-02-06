@@ -579,7 +579,10 @@ nav a:hover{
         margin-left: 0rem;
         margin-right: 0rem;
     }
-    
+    .exp-list-item .show .content{
+        max-height:40rem;
+
+    }
     
 
     #me{
@@ -599,10 +602,7 @@ nav a:hover{
     
     .exp-list-item .show .content{
         max-height:30rem;
-
     }
-
-
     .section-3 .text{
         width:100%;
         min-width:0;
@@ -613,19 +613,19 @@ nav a:hover{
         min-width: 100%;
         padding:0rem 0;
     }
-
     .project{
         margin: 1rem 0;
     }
 
-    .contacts-link a
-    {
+    .contacts-link a{
     font-size: 1rem;
     }
 }
 @media (max-width: 600px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
-    
+    .exp-list-item .show .content{
+        max-height:60rem;
+    }
     #small-me{
         max-height: 100px;
         display:flex;
