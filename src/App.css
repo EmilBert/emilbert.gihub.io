@@ -596,6 +596,12 @@ nav a:hover{
     .text-card-container {
         width:100%;
     }
+    
+    .exp-list-item .show .content{
+        max-height:30rem;
+
+    }
+
 
     .section-3 .text{
         width:100%;
