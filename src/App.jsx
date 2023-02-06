@@ -24,7 +24,7 @@ function App() {
           <div className="section" id="about-section">
             <img id="me" alt="me" src={me} />
             <div>
-              <p> I am an ambitious developer who loves creating experiences, in both games and through web development. I have a passion for computer graphics and UI/UX design. Here you can read more about me and some of my projects!</p>
+              <p> I am an ambitious developer who loves creating experiences in both games and through web development. I have a passion for computer graphics and UI/UX design. Here you can read more about me and some of my projects!</p>
               <a className="download-link" href={cv} download>Emil Bertholdsson-CV-eng.pdf <MdDownload/></a>
               {/* <a className="download-link" href={me} download>Emil Bertholdsson-CV-sv.pdf <MdDownload/></a> */}
             </div>
