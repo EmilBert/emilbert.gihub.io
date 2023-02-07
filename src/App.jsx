@@ -24,7 +24,10 @@ function App() {
           <div className="section" id="about-section">
             <img id="me" alt="me" src={me} />
             <div>
-              <p> I am an ambitious developer who loves creating experiences in both games and through web development. I have a passion for computer graphics and UI/UX design. Here you can read more about me and some of my projects!</p>
+              <p> I love developing fun experiences through both web and game development. 
+                  I enjoy solving complex problems with a passion for UI/UX design and computer graphics. 
+                  I am currently pursuing my Masters in Science and Engineering in Media Technology.
+                  Here on my website you can read more about me and see some of my projects. If you are interested in my CV you can find it below!</p>
               <a className="download-link" href={cv} download>Emil Bertholdsson-CV-eng.pdf <MdDownload/></a>
               {/* <a className="download-link" href={me} download>Emil Bertholdsson-CV-sv.pdf <MdDownload/></a> */}
             </div>

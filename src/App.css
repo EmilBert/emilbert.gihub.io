@@ -186,7 +186,7 @@ nav .wrapper{
 nav a{
     padding:1rem;
     transition: all 0.3s ease-in-out;
-    width: 15%;
+    min-width: 20%;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;

@@ -9,7 +9,7 @@ export default function Footer(){
         <div id="footer">
             <div className="wrapper">
                 <div className="section" id="footer-section">
-                    <h1>Contacts</h1>
+                    <h1>Contact</h1>
                     <div className="contacts-link">
                     <a href="https://www.linkedin.com/in/emil-bertholdsson/"><AiFillLinkedin/> Emil Bertholdsson</a>
                     </div>

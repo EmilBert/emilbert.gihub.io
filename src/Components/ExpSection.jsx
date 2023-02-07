@@ -72,7 +72,7 @@ function List(props) {
     },
     {
       "emoji":"📚",
-      "title":"Information- & Medietechnology",
+      "title":"Information & Media Technology",
       "subTitle":"Berzeliusksolan Linköping (High School)",
       "year":"2015-2018",
       "content":"My programming journey started during high school when I was first introduced to programming. Here I learnt programming basics in java as well as web development using HTML, CSS, JS, PHP and SQL."
