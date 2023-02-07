@@ -83,7 +83,7 @@ function ProjectSection() {
     {
       "image":wfc,
       "title":"WFC Level editor",
-      "desc":"I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.",
+      "desc":"In a group of two, we implemented a level-editor into our game using Wave Function Collapse. The goal was to make an easy to use level-editor that anyone can use that uses WFC to guide the user as well as randomly generate its own levels.",
       "tags":"C#, Unity, Game Development", 
       "link":""
     },
