@@ -1,4 +1,5 @@
 import * as React from "react";
+import me from './../images/emil2.jpg';
 
 export default function HeroSection() {
 
@@ -27,10 +28,14 @@ export default function HeroSection() {
     }, [title]);
 
     return (
-        <div className="section-1">
+        <div className="section-1">      
             <div className="content">
+                <div className="me-container">
+                    <img id="me" alt="me" src={me} />
+                </div>
                 <div className="text">
                     <div>
+                            
                         <h1>
                             <span className="wave">&#128075;</span>  {title}<span className={title == "" || title.length == titleText.length ?"cursor blink":"cursor"}>|</span>
                         </h1>

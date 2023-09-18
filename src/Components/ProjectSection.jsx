@@ -17,11 +17,11 @@ import tourvis from './../images/TourVis.png';
 import wfc from './../images/wfc.png';
 import avis from './../images/avis.png';
 
-
 function Project(props){
   return (
+    <>
         <div className="project">
-          <img className="project-img" alt="me" src={props.image}/>
+            <img className="project-img" alt="me" src={props.image}/>
           <div className="project-text">
             
             <div>
@@ -34,6 +34,7 @@ function Project(props){
             </div>
           </div>
         </div>
+    </>
   );
 }
 
@@ -42,22 +43,22 @@ function ProjectSection() {
   [
     {
       "image":holmgang,
-      "title":"HOLMGANG",
-      "desc": <>Holmgang is a party brawler where you fight your friends to appease the norse gods. In a group of four we developed Holmgang and it became our most ambitious project to date. The project was a culmination of all the skills we had learnt during our studies and we placed 2nd at the LiU Game Awards. <br/><br/> During development I contributed with my programming skills and my eye for design. I implemented multiple systems and developed the artstyle and UI/UX design for the game.<br/><br/> We hope to have a full release at some point in 2023, so keep a lookout!</>,
+      "title":"Atganga: Spectacle for the Gods",
+      "desc": <>Atganga (previously named Holmgang) is a party brawler where you fight your friends to appease the norse gods. In a group of four we developed Atganga and it became our most ambitious project to date. The project was a culmination of all the skills we had learnt during our studies and we placed 2nd at the LiU Game Awards. <br/><br/> During development I contributed with my programming skills and my eye for design. I implemented multiple systems and developed the artstyle and UI/UX design for the game.<br/><br/> We hope to have a full release at some point in 2024, so keep a lookout!</>,
       "tags":"C#, Unity, Game Development",
       "link":"https://atganga.com/"
     },
     {
       "image":bc,
-      "title":"BERTCRAFT",
+      "title":"Procedural Voxel Terrain",
       "desc":<>I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.</> ,
       "tags":"C++, OpenGL", 
-      "link":"https://github.com/EmilBert/proc-project"
+      "link":"https://gray-gasosaurus-b72.notion.site/Procedural-Voxel-Terrain-6d06ae00b634410daf9162cd5ed9f8ce?pvs=4"
     },
     {
       "image":farming,
       "title":"Exertion Farming Game - Master Thesis",
-      "desc":<>I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.</> ,
+      "desc":<>For my Master's Thesis, Linus Karlsson and I explored the function of farming game design in an exertion game, as requested by Liopep. This was to investigate how farming game design tropes can be utilized to encourage greater exertion during small everyday play sessions. We conducted research on various game design aspects and subsequently developed a game that we iteratively improved and expanded upon to incorporate as many farming game design elements as possible.<br></br><br></br> The project was created using Godot in conjunction with Mediapipe to convert player poses into usable data for controlling the game. The game turned out to be excellent and should now be in use at Liopep!</> ,
       "tags":"Godot, GDScript, MediaPipe, Game Design", 
       "link":"https://github.com/EmilBert/proc-project"
     },
@@ -78,11 +79,10 @@ function ProjectSection() {
       "title":"StickIt - UX Design project",
       "desc":
       <>
-      In a group of four we created a social media meant to “rival” twitter. Here you post audio clips instead of text based posts, aka barks. The app was built using a MongoDB database, A node.js backend and a React TS frontend. The user auth was implemented with supertokens and sound files were stored in the Google Cloud Platform.
-      <br/><br/>
-      I contributed with both backend and frontend work, I implemented some REST API endpoints with mongoose and created multiple components with React. I also created the overall design language and layout of the application.
+      During a course in UX, two others and I created and tested a user interface using common UX practices. The interface was built from the ground up using an affinity map, where we defined several important factors that would influence our design. Following that, we conducted extensive user testing, allowing multiple people to test the interface during a monitored session to assess its intuitiveness. We there collected both quantitative and qualitative data
+ to finally be used to improve and draw conclusions about the project.
       </>,
-      "tags":"React, TS, MongoDB, Node", 
+      "tags":"UX Design, Figma, User Testing", 
       "link":"https://www.youtube.com/watch?v=ZDMbQskKzBw"
     },
     {
@@ -166,15 +166,10 @@ function ProjectSection() {
         <div className="projects">
           <div className="projects-column">
           {listContent.map((proj, index) => (
-            index % 2 == 0 ? <Project key={index} image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
+            <Project key={index} image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/>
           ))}
           </div>
-          <div style={{flex:1}}></div>
-          <div className="projects-column">
-          {listContent.map((proj, index) => (
-            index % 2 == 1 ? <Project key={index} image={proj.image} title={proj.title} desc={proj.desc} tags={proj.tags} link={proj.link}/> : null
-          ))}
-          </div>
+          
         </div>
       </div> 
   );

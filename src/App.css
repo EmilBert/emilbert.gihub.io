@@ -5,7 +5,7 @@ iframe {
 
 .App{
     width: 100%;
-    background: #DADADA;
+    background: #e2e2e2;
     scroll-behavior: smooth;
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -18,12 +18,16 @@ h1,h2,h3,h4,h5{
 }
 
 #about-section{
-    display: flex;
+    padding-top:3rem;
+    font-size: 1.3rem;
 }
+.cv-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-
-#about-section p, #about-section a{
-    margin: 2rem;
 }
 
 .download-link{
@@ -33,7 +37,8 @@ h1,h2,h3,h4,h5{
     color:#1B1F41;
     margin: 0 1rem 1rem 0;
     border-radius: 2px;
-    border:#1B1F41 1px solid;;
+    border:#1B1F41 1px solid;
+    transform: translateY(60%);
 }
 
 .download-link:hover{
@@ -58,22 +63,23 @@ h1,h2,h3,h4,h5{
     margin: 2rem 0;
     background: "white";
     border-radius: 2px;
-
+    display: flex;
+    justify-content: space-between;
+}
+.project-img{
+    max-width: 50%;
+    object-fit: cover;
     border: #1B1F41 1px solid;
     box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
     -webkit-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
     -moz-box-shadow: 1px 12px 54px -8px rgba(0,0,0,0.61);
     transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1B1F41;   
 }
 
-.projects-column img{
-    width:100%;
-    margin:0;
-    border-bottom: #1B1F41 1px solid;
-}
-
-.project:hover {
-    transform: scale(1.01);
+.project-img:hover {
+    object-fit:contain
 }
 
 .project h3{
@@ -81,9 +87,9 @@ h1,h2,h3,h4,h5{
 }
 
 .project-text{
+    width: 46%;
     padding:1rem;
 }
-
 .project-text p{
     padding-bottom: 1rem;
 }
@@ -100,7 +106,6 @@ h1,h2,h3,h4,h5{
 .exp-list{
     border-spacing:0;
     overflow-x:auto;
-    background:#DADADA;
     overflow: hidden;
     transition: all 0.1s ease;
 }
@@ -208,7 +213,7 @@ nav .bg-show{
 }
 
 nav a:hover{
-    color:#DADADA;
+    color:#e2e2e2;
 }
 
 .cursor{
@@ -273,7 +278,7 @@ nav a:hover{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    min-height:30rem;
+    min-height:36rem;
     padding-top:2rem;
     overflow: hidden;
 
@@ -285,34 +290,62 @@ nav a:hover{
     width:100%;
     max-width: 1200px;
     margin:auto;
+    padding:0 2rem;
     display: table;
 }
 
 #footer{
     background-color: #1B1F41;
     color: #808cfc;
+    
+
 }
 
 #footer-section{
     color: #808cfc;
     padding-top: rem;
     padding-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
 }
 
 .contacts-link a
 {
     color: #808cfc;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#contact-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
 
 #me{
-    max-height: 200px;
-    height: 8vw;
     width:auto;
-    display: flex;
     border-radius: 100%;
     border:#1B1F41 solid 2px;
+    background: linear-gradient(20deg, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0.3) 100%);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.me-container
+{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    justify-content: space-between;
+    padding-top: 1rem;
 }
 
 #small-me{
@@ -326,11 +359,11 @@ nav a:hover{
 
 .section-1 .text{
     width: 70%;
-    min-width: 200px;
+    min-width: 250px;
     color: #F5F5F5;
     vertical-align: middle;
     display: table-cell;
-    padding: 0 5rem;
+    padding: 0 0rem 0 2rem;
 }
 
 .section-1 .text div{
@@ -340,7 +373,7 @@ nav a:hover{
 
 .section-1 .text h1{
     width:100%;
-    font-size: 4rem;
+    font-size: 3.5rem;
     /* animation: 1s ease-out 0s 1 transitionAppear; */
     padding: 0 0 2rem 0;
     vertical-align: middle;
@@ -430,89 +463,12 @@ nav a:hover{
     justify-content: space-between;
 }
 
-/*BANNERS*/
-/* .banner-cards-container{
-    max-height:400px;
-    margin:4rem 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    transition: display 5s ease-in-out;
-    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
-}
-
-.banner-card-outer{
-    position: relative;
-    height:22rem;
-    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
-    margin:0.5rem;
-    border-radius: 20px;
-    width:20%;
-}
-
-
-.banner-card{
-    
-    position: relative;
-    height:22rem;
-    transition: padding 0.1s ease-in-out, margin 0.1s ease-in-out, width 0.5s ease-in-out;
-    margin:0.5rem;
-    background:black;
-    border-radius: 20px;
-
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-
-    background-size: contain;
-    background-size: cover;
-    background-position: center center;
-}
-
-.banner-card:hover{
-    margin:0;
-    padding:0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-.banner-card-hidden{
-    width:0;
-}
-.banner-card-hidden div{
-    display:none;
-}
-
-.container-none{
-    display:none;
-    width:0;
-}
-
-.chosen-banner-card{
-    display:flex;
-    width:100%;
-    background: none;
-}
-
-.chosen-banner-card img{
-    max-height:400px;
-}
-
-.banner-card-outer .text{
-    padding:1rem;
-    color: white;
-    backdrop-filter: blur(20px);
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
-    text-align: left;
-    margin:0.5rem;
-}
-.banner-card .text h3, .banner-card .text p{
-    padding-left:1rem; 
-} */
-
-
 @media (max-width: 1000px) {
+    
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
     .section-1 .text h1{
         padding:0;
-        font-size: 7vw;
+        font-size: 6vw;
     }
     nav{
         padding-top: 0;
@@ -570,21 +526,15 @@ nav a:hover{
         font-size: 1rem;
         padding:0;
     }
-
-    #about-section{
-        padding:0;
-    }
-    
     #about-section p, #about-section a{
         margin-left: 0rem;
         margin-right: 0rem;
+        
     }
     .exp-list-item .show .content{
         max-height:40rem;
 
     }
-    
-
     #me{
         display:none;
     }
@@ -615,10 +565,29 @@ nav a:hover{
     }
     .project{
         margin: 1rem 0;
+        display: block;
     }
 
+    .project-img{
+        max-width: 100%;
+    }
+    .project-image-container{
+        width: 500%;
+        max-width: 100%;
+        
+    }
+    .project-text{
+        width: 100%;
+        padding:1rem;
+    }
+
+    
+
     .contacts-link a{
-    font-size: 1rem;
+        font-size: 1rem;
+    }
+    #footer-section{
+        display: block;
     }
 }
 @media (max-width: 600px) {
@@ -629,6 +598,12 @@ nav a:hover{
     #small-me{
         max-height: 100px;
         display:flex;
+    }
+    .exp-list-item .item-icon{
+        width:00rem;
+        padding:0.0rem;
+        font-size: 0.0rem;
+        border-right: 2px solid #1B1F41;
     }
     
 }
