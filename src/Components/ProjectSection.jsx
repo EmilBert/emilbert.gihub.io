@@ -5,6 +5,8 @@ import cloth from './../images/cloth.png';
 import dunwell from './../images/dunwell.png';
 import scroll from './../images/scroll.png';
 import bt from './../images/bt.png';
+import ux from './../images/ux.png';
+import farming from './../images/farming.png';
 import bc from './../images/bc.png';
 import barker from './../images/barker.png';
 import holmgang from './../images/holmgang.png';
@@ -43,7 +45,7 @@ function ProjectSection() {
       "title":"HOLMGANG",
       "desc": <>Holmgang is a party brawler where you fight your friends to appease the norse gods. In a group of four we developed Holmgang and it became our most ambitious project to date. The project was a culmination of all the skills we had learnt during our studies and we placed 2nd at the LiU Game Awards. <br/><br/> During development I contributed with my programming skills and my eye for design. I implemented multiple systems and developed the artstyle and UI/UX design for the game.<br/><br/> We hope to have a full release at some point in 2023, so keep a lookout!</>,
       "tags":"C#, Unity, Game Development",
-      "link":"https://holmgang-website.firebaseapp.com"
+      "link":"https://atganga.com/"
     },
     {
       "image":bc,
@@ -53,12 +55,11 @@ function ProjectSection() {
       "link":"https://github.com/EmilBert/proc-project"
     },
     {
-      "image":space,
-      "title":
-      "The Space Gas station",
-      "desc":"During the course TNM091 at LiU, in a group of four we developed a comedic, immersive and interactive VR experience involving a gas station in space. Here we got to apply our knowledge of immersive experiences and create a fun game for VR.",
-      "tags":"C#, Unity, VR-development", 
-      "link":""
+      "image":farming,
+      "title":"Exertion Farming Game - Master Thesis",
+      "desc":<>I have always been a big fan of Minecraft and in the course TNM084 at LiU i had the opportunity to try my hands at making my own version. Using a combination of 2D and 3D noise I was able to create multiple procedurally generated biomes that blend together. The program was written in C++ with OpenGL.</> ,
+      "tags":"Godot, GDScript, MediaPipe, Game Design", 
+      "link":"https://github.com/EmilBert/proc-project"
     },
     {
       "image":barker,
@@ -72,7 +73,18 @@ function ProjectSection() {
       "tags":"React, TS, MongoDB, Node", 
       "link":"https://www.youtube.com/watch?v=ZDMbQskKzBw"
     },
-    
+    {
+      "image":ux,
+      "title":"StickIt - UX Design project",
+      "desc":
+      <>
+      In a group of four we created a social media meant to “rival” twitter. Here you post audio clips instead of text based posts, aka barks. The app was built using a MongoDB database, A node.js backend and a React TS frontend. The user auth was implemented with supertokens and sound files were stored in the Google Cloud Platform.
+      <br/><br/>
+      I contributed with both backend and frontend work, I implemented some REST API endpoints with mongoose and created multiple components with React. I also created the overall design language and layout of the application.
+      </>,
+      "tags":"React, TS, MongoDB, Node", 
+      "link":"https://www.youtube.com/watch?v=ZDMbQskKzBw"
+    },
     {
       "image":ray,
       "title":"Monte Carlo Ray Tracer",
@@ -81,11 +93,27 @@ function ProjectSection() {
       "link":"https://github.com/EmilBert/ray-william-tracer"
     },
     {
+      "image":space,
+      "title":
+      "The Space Gas station",
+      "desc":"During the course TNM091 at LiU, in a group of four we developed a comedic, immersive and interactive VR experience involving a gas station in space. Here we got to apply our knowledge of immersive experiences and create a fun game for VR.",
+      "tags":"C#, Unity, VR-development", 
+      "link":""
+    },
+    {
       "image":wfc,
       "title":"WFC Level editor",
       "desc":"In a group of two, we implemented a level-editor into our game using Wave Function Collapse. The goal was to make an easy to use level-editor that anyone can use that uses WFC to guide the user as well as randomly generate its own levels.",
       "tags":"C#, Unity, Game Development", 
       "link":""
+    },
+    {
+      "image":cloth,
+      "title":
+      "Cloth Simulation",
+      "desc":<>Made in a group of four, A Cloth simulation made with a spring-damper model. Rendered in OpenGL.</>,
+      "tags":"Matlab, C++, OpenGL", 
+      "link":"https://github.com/davidstyrbjorn/cloth-simulation-tnm085"
     },
     {
       "image":cc,
@@ -108,13 +136,14 @@ function ProjectSection() {
       "tags":"C#, Unity, Game development", 
       "link":"https://ldjam.com/events/ludum-dare/50/down-to-the-wire"
     },
+    
     {
       "image":avis,
       "title":
       "Emergency Dashboard - VAST Challenge",
       "desc":
       "In a group of three, we implemented an emergency dashboard meant to help emergency responders decide where to send their efforts. The dashboard consists of multiple visualization techniques such as Choropleth Map and Heatmap. The project was made to solve part one of the VAST Challenge 2019.",
-      "tags":"C#, Unity, Game development", 
+      "tags":"JS, Vue, InfoVis", 
       "link":"https://github.com/fredrikburmester/TNM098 "
     },
     {
@@ -124,17 +153,10 @@ function ProjectSection() {
       "desc":<>
       In a group of three, we developed and designed an information visualization to show the travels of different regions and continents. I got to test my knowledge of infovis and how to intuitively display and portray data. 
       </>,
-      "tags":"d3.js, JS", 
+      "tags":"d3.js, JS, InfoVis", 
       "link":"https://github.com/EmilBert/TourVis"
     },
-    {
-      "image":cloth,
-      "title":
-      "Cloth Simulation",
-      "desc":<>Made in a group of four, A Cloth simulation made with a spring-damper model. Rendered in OpenGL.</>,
-      "tags":"Matlab, C++, OpenGL", 
-      "link":"https://github.com/davidstyrbjorn/cloth-simulation-tnm085"
-    },
+    
   ];
   
   return (

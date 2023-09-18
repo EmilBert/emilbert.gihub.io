@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function HeroSection() {
 
-    let titleText = "Hi, my name is Emil!                 Im a 5th year master engineering student at LiU.";
+    let titleText = "Hi, my name is Emil!                 \nIm a recently graduated software engineer.";
 
     const [title , setTitle] = React.useState("");
 
@@ -29,14 +29,13 @@ export default function HeroSection() {
     return (
         <div className="section-1">
             <div className="content">
-              <div className="text">
-                <div>
-                    <h1>
-                        <span className="wave">&#128075;</span>  {title}<span className={title == "" || title.length == titleText.length ?"cursor blink":"cursor"}>|</span>
-                    </h1>
+                <div className="text">
+                    <div>
+                        <h1>
+                            <span className="wave">&#128075;</span>  {title}<span className={title == "" || title.length == titleText.length ?"cursor blink":"cursor"}>|</span>
+                        </h1>
+                    </div>
                 </div>
-                {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque efficitur, mi eu porta consectetur, lacus enim sollicitudin nunc, a faucibus sapien lectus ut sapien. Nulla at hendrerit diam. Aliquam quis neque sem. Etiam in ante eget quam consequat pharetra. Nulla facilisi. Mauris orci nisl, consequat eu lobortis nec, commodo non velit. Ut sapien sem, lacinia in volutpat ac, aliquet nec mauris. Aliquam scelerisque nibh sit amet aliquam mollis.</p> */}
-              </div>
             </div>
         </div>
     );
