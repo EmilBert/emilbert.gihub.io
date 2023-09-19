@@ -25,14 +25,15 @@ function App() {
         <div className="wrapper">
           <div className="section" id="about-section">
             <div>
-              <p> I love developing fun experiences through both web and game development. 
-                  I enjoy solving complex problems with a passion for UI/UX design and computer graphics. 
-                  I just graduated as a Master of Science in Media Technology and Engineering.
-                  Here on my website you can read more about me and see some of my projects. If you are interested in my resumé you can find it below! I am am currently looking for work within software development!</p>
+              <p> 
+                I love developing fun experiences through both web and game development, solving problems through programming and design. I am a creative problem solver who works well alone but prefers working with an ambitious team that enjoys discussions! I am passionate about software development, UI/UX design and games. Places that are creating awesome experiences is where I want to be. I just graduated as a Master of Science in Media Technology and Engineering. 
+                <br></br><br></br>
+                Here on my website you can read more about my experiences and see some of my projects. If you are interested in my resume you can find it below! I am am currently looking for work within software development, so let me know if you're interested or want to learn more about me.
+                </p>
             </div>
           </div>
           <div className="cv-container">
-            <a className="download-link" href={cv} download>Click here to download my Resumé!<MdDownload/></a>
+            <a className="download-link" href={cv} download>Click here to download my Resume!<MdDownload/></a>
           </div>
           <ExpSection />
           <ProjectSection/>
