@@ -30,7 +30,7 @@ function Project(props){
             </div>
             <div>
               <p>{props.desc}</p>
-              {props.link != "" ?  <a href={props.link}>View More</a>: <>Reach out if you want to learn more about this project!</>}
+              {props.link != "" ?  <a href={props.link}>Learn More</a>: <>Reach out if you want to learn more about this project!</>}
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ function ProjectSection() {
       "image":holmgang,
       "title":"Atganga: Spectacle for the Gods",
       "desc": <>Atganga (previously named Holmgang) is a party brawler where you fight your friends to appease the norse gods. In a group of four we developed Atganga and it became our most ambitious project to date. The project was a culmination of all the skills we had learnt during our studies and we placed 2nd at the LiU Game Awards. <br/><br/> During development I contributed with my programming skills and my eye for design. I implemented multiple systems and developed the artstyle and UI/UX design for the game.<br/><br/> We hope to have a full release at some point in 2024, so keep a lookout!</>,
-      "tags":"C#, Unity, Game Development",
+      "tags":"C#, Unity, Game Development, UI/UX Design",
       "link":"https://atganga.com/"
     },
     {

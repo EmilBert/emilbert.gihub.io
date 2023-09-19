@@ -28,7 +28,7 @@ function App() {
               <p> I love developing fun experiences through both web and game development. 
                   I enjoy solving complex problems with a passion for UI/UX design and computer graphics. 
                   I just graduated as a Master of Science in Media Technology and Engineering.
-                  Here on my website you can read more about me and see some of my projects. If you are interested in my CV you can find it below!</p>
+                  Here on my website you can read more about me and see some of my projects. If you are interested in my resumé you can find it below! I am am currently looking for work within software development!</p>
             </div>
           </div>
           <div className="cv-container">

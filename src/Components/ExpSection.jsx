@@ -7,7 +7,7 @@ function Item({emoji, title, subTitle, year, content}) {
   let yearFormat = year.split("-")
 
   
-  const [selected, setSelected]   = useState(1);
+  const [selected, setSelected] = useState(1);
   
   return (
     <tr className="exp-list-item "  onClick={selected == 1 ? () => setSelected(0) : () => setSelected(1)}>
@@ -43,7 +43,7 @@ function List(props) {
       "title":"Master Thesis at LiU - Exertion Game",
       "subTitle":"Linköping University",
       "year":"2023-2023",
-      "content":"I am currently writing my master thesis at LiU. Me and my friend Linus Karlsson are developing an exertion game made for office environments at LiU. The game is being built with Godot and uses MediaPipe to create a skeletal map using live web camera footage."},
+      "content":"You can find more information about my master thesis in the projects section!"},
     {
       "emoji":"📚",
       "title":"Master of Science and Engineering in Media Technology",
@@ -57,10 +57,9 @@ function List(props) {
       "subTitle":"CoderDojo Norrköping",
       "year":"2021-2023",
       "content":<>
-        Outside of school I volunteer at CoderDojo in Norrköping. Coderdojo is an ideal organization that wants to help further kids' interests in programming and technology. We hold dojos every week where we program together with the kids and teach them programming basics, web development and game development.
-        <br/><br/>
-        I am the main organizer of these dojos. I keep in contact with our coaches and make sure we have coaches that can attend. I assess and further develop these dojos together with some of our board members.
-
+        During the last two years of my studies i took part in CoderDojo in Norrköping. CoderDojo is a non-profit organization that provides resources for children and teenagers to learn programming. I was responsible for organizing and developing bi-weekly dojos, meant to introduce and teach kids programming.
+        <br></br><br></br>
+         During my time with coderdojo i got to manage a team of coaches, plan and organize events and teach many facets of programming and development. It was very fun and rewarding seeing the kids grow their passion and technical skill over the years.
       </>
     },
     {
